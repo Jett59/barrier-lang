@@ -14,10 +14,10 @@ gc_linux.a:
 
 barrier.exe:
 	rm -f *.exe
-	gcc -o barrier.exe *.c
+	gcc -o barrier.exe gc_windows.lib *.c
 barrier.app:
 	rm -f *.app
-	gcc -o barrier.app *.c
+	gcc -o barrier.app gc_osx.a *.c
 barrier.out:
 	rm -f *.out
-	gcc -o barrier.out *.c
+	gcc -o barrier.out gc_linux.a *.c
